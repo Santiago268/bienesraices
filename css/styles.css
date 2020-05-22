@@ -3,7 +3,7 @@ html{
     font-size: 62.5%; /* Reset para REMS - 62.5% = 10 px de 16 px */
 }
 *, *:before, *:after{
-    ox-sizing: border-box;
+    box-sizing: border-box;
 }
 body{
     font-family: 'Lato', sans-serif;
@@ -46,6 +46,9 @@ h4{
 .d-block{
     display: block!important;
 }
+.contenido-centrado{
+    max-width: 80rem;
+}
 /* Botones */
 .boton{
     color: white;
@@ -67,6 +70,10 @@ h4{
     margin-bottom: 3rem;
 }
 /* Header */
+.site-header{
+    background-color: #333333;
+    padding: 1rem 0 3rem 0;
+}
 .site-header.inicio{
     background-image: url(../img/header.jpg);
     background-position: center center;
@@ -124,11 +131,13 @@ h4{
 .contenedor-anuncios{
     display:flex; 
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 .anuncio{
-    flex-basis: calc(33.3% - 1rem);
+    flex: 0 0 calc(33.3% - 1rem);
     border: 0.1rem solid #B5B5B5;
     background-color: #F5F5F5; 
+    margin-bottom: 2.5rem;
 }
 .contenido-anuncio{
     padding:2rem;
@@ -146,6 +155,8 @@ h4{
     padding: 0;
     display: flex;
     justify-content: space-evenly;
+    flex: 1;
+    max-width: 500px;
 }
 .iconos-caracteristicas li{
     display: flex;
@@ -256,4 +267,22 @@ h4{
     padding: 2rem 0;
     display:flex;
     justify-content: space-between;
+}
+/* Nosotros Web Site*/
+.contenido-nosotros{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-column-gap: 2rem;
+}
+.texto-nosotros blockquote{
+    font-weight: 900;
+    font-size: 2rem;
+    margin: 0;
+    padding: 1rem 0 3rem 0;
+}
+/* Anuncios */
+.resumen-propiedad{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
