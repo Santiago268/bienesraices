@@ -68,7 +68,6 @@ h4{
     text-decoration: none;
     font-size: 1.8rem;
     padding: 1rem 3rem;
-    display: inline-block;
     margin-top: 3rem;
     text-align: center;
     border: none;
@@ -399,10 +398,13 @@ h4{
 }
 
 /* Nosotros Web Site*/
-.contenido-nosotros{
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-column-gap: 2rem;
+
+@media (min-width: 768px) {
+    .contenido-nosotros{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-column-gap: 2rem;
+    }
 }
 
 .texto-nosotros blockquote{
@@ -447,6 +449,12 @@ select{
     border: none;
     border-radius: 1rem;
     color: black;
+}
+
+@media (max-width: 768px) {
+    input[type="submit"]{
+        width: 100%;
+    }
 }
 
 input[type="radio"]{
